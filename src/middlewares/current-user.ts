@@ -15,11 +15,13 @@ declare global {
 }
 
 export const currentUser = (req: Request, res: Response, next: NextFunction) => {
+    //@ts-ignore
     if (!req.session?.jwt) {
         return next();
     }
     
     try{
+        //@ts-ignore
         const payload = Jwt.verifyToken(req.session.jwt) as UserPayload;
         req.currentUser = payload;
     }
