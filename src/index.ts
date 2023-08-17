@@ -15,3 +15,9 @@ export * from './middlewares/validate-request';
 //EXPORT COMMON UTILITY HELPERS
 export * from './utilities/jwt';
 export * from './utilities/password-manager';
+
+export * from './events/base-listener';
+export * from './events/base-publisher';
+export * from './events/subjects';
+export * from './events/ticket-created-event';
+export * from './events/ticket-updated-event';
